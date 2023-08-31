@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+group 'com.urlapov'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    api(project(":LabSpring3:Dao"))
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.4'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.0.4'
+    testImplementation 'com.h2database:h2:2.1.214'
+    runtimeOnly 'org.postgresql:postgresql:42.5.4'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:3.0.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.0.4'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+}
+
+test {
+    useJUnitPlatform()
+}
